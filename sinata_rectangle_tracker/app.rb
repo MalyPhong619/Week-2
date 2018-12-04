@@ -1,7 +1,13 @@
 require('sinatra')
 require('sinatra/reloader')
+require('pry')
 
-get('/rectangle') do
-  @description = "This application will determine whether a rectangle is a square or not."
-  erb(:input)
+  get('/') do
+    erb(:input)
+  end
+
+  get('/output')
+    binding.pry
+    erb(:output)
+  end
 end
